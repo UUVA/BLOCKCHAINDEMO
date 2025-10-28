@@ -9,7 +9,7 @@ class Blockchain {
     }
 
     get() {
-        returnthis.blockchain;
+        return this.blockchain;
     }
     get latestBlock() {
         return this.blockchain[this.blockchain.length - 1];
@@ -94,7 +94,7 @@ class Blockchain {
 
         if (previousBlock.index + 1 !== nextBlock.index) {
             return false;
-        } else if (previousBlock.hash !== nextBlock.index) {
+        } else if (previousBlock.hash !== nextBlock.previousHash) {
             return false;
         } else if (nextBlockHash !== nextBlock.hash) {
             return false;
